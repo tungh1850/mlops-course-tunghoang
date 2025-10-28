@@ -1,0 +1,14 @@
+artifact_uri: mlflow-artifacts:/536257891288565997/7af596a904c348cfb61196b7472923df/artifacts
+end_time: 1761672837206
+entry_point_name: ''
+experiment_id: '536257891288565997'
+lifecycle_stage: active
+run_id: 7af596a904c348cfb61196b7472923df
+run_name: iris_training_2
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1761672834245
+status: 3
+tags: []
+user_id: tungh1850

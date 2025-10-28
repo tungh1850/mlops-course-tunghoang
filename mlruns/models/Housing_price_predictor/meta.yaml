@@ -1,0 +1,8 @@
+aliases:
+  production_v1: '1'
+creation_timestamp: 1761402869453
+deployment_job_id: null
+deployment_job_state: null
+description: ''
+last_updated_timestamp: 1761402970264
+name: Housing_price_predictor

@@ -1,0 +1,15 @@
+creation_timestamp: 1761402869461
+current_stage: None
+deployment_job_state: null
+description: ''
+last_updated_timestamp: 1761402869461
+model_id: m-c3cf5dc6cda64ab8b3fdcfb051601bf3
+name: Housing_price_predictor
+run_id: 163e445ee1c74dc19e98e5a742fc5b4e
+run_link: ''
+source: mlflow-artifacts:/107524408028840614/models/m-c3cf5dc6cda64ab8b3fdcfb051601bf3/artifacts
+status: READY
+status_message: null
+storage_location: mlflow-artifacts:/107524408028840614/models/m-c3cf5dc6cda64ab8b3fdcfb051601bf3/artifacts
+user_id: null
+version: 1
