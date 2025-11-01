@@ -8,7 +8,7 @@ from fastapi import APIRouter
 app = FastAPI()
 
 from scripts.session_3.schemas.request import PredictRequest
-from scripts.session_3.schemas.response import PredictResponse
+from scripts.session_3.schemas.response import PredictResponse 
 
 mlflow.set_tracking_uri('http://localhost:8080')
 model_name = "Housing_price_predictor"

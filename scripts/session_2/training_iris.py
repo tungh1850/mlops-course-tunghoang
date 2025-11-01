@@ -36,7 +36,7 @@ def train() -> None:
     iris['species'] = species
 
     # Droping the target and species since we only need the measurements
-    X = iris.drop(['target','species'], axis=1)
+    X = iris.drop(['target','species'], axis=1) 
     X_features = X.columns.to_list()
     # converting into numpy array and assigning petal length and petal width
     X = X.to_numpy()[:, (2,3)]

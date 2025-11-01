@@ -4,4 +4,4 @@ class PredictResponse(BaseModel):
     result: float
 
 class IrisPredictResponse(BaseModel):
-    result: float
+    result: float  

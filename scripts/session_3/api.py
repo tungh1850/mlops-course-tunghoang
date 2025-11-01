@@ -19,7 +19,7 @@ class Method(str, Enum):
     subtract = "subtract"
     multiply = "multiply"
     divide = "divide"
-
+ 
 class CalculateResquest(BaseModel):
     method: Method
     num1:float

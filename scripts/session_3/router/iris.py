@@ -14,7 +14,7 @@ mlflow.set_tracking_uri('http://localhost:8080')
 model_name = "iris_model"
 model_version = "1"
 model_uri = f"models:/{model_name}/{model_version}"
-model = mlflow.sklearn.load_model(model_uri)
+model = mlflow.sklearn.load_model(model_uri) 
 
 iris_router = APIRouter(prefix="/iris")
 
