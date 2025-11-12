@@ -58,4 +58,4 @@ jobs:
         with:
           service: 'mlops-course-app'
           image: ${{ vars.DOCKER_USERNAME }}/mlops-course-app:PULL-${{ github.event.number }}
-          region: us-central1
+          region: us-central1 
