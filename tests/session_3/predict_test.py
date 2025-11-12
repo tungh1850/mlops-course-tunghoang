@@ -9,6 +9,12 @@ def mock_model():
     model.predict.return_value = [1.0]
     return model
 
+@pytest.fixture
+def mock_pandas():
+  mock_pandas = MagicMock()
+  mock_pandas.DataFrame.return_value = {"test": [1, 2, 3]}
+  with patch("scripts.session_3.router.predict.pd", mock_pandas):
+    yield mock_pandas
 
 @pytest.fixture
 def mock_mlflow_server(mock_model):
@@ -41,7 +47,7 @@ def test_func_predict(mock_mlflow_server, mock_model):
     assert response.predicted_price == 1.0
 
 
-def test_router(mock_mlflow_server, mock_model):
+def test_router(mock_mlflow_server, mock_model,mock_pandas):
     from fastapi import FastAPI
     from fastapi.testclient import TestClient
 
@@ -62,3 +68,11 @@ def test_router(mock_mlflow_server, mock_model):
     )
     assert response.status_code == 200
     assert response.json() == {"predicted_price": 1.0}
+
+    mock_pandas.DataFrame.assert_called_once_with({
+        "Avg. Area Income": [100000],
+        "Avg. Area House Age": [10],
+        "Avg. Area Number of Rooms": [3],
+        "Avg. Area Number of Bedrooms": [2],
+        "Area Population": [100000]
+    })
